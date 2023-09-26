@@ -5,6 +5,7 @@
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
+    "cypress": "^13.2.0",
     "fs-extra": "^11.1.1"
   }
 }
