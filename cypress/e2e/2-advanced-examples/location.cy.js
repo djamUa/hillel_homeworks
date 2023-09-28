@@ -30,3 +30,11 @@ context('Location', () => {
     cy.url().should('eq', 'https://example.cypress.io/commands/location')
   })
 })
+context ('Check the AIN website', () => {
+  it ('Open the main page and click',()=> {
+    cy.visit("/")
+    cy.get('astro-island + a[href="https://on.cypress.io"]').click()
+    cy.url().should('contain', '/why-cypress')
+    cy.get ('h1').should('contain.text', 'Why Cypress?')
+  })
+})
