@@ -11,6 +11,10 @@ export default defineConfig({
       runMode: 2
     },
     setupNodeEvents(on, config) {
+      on ('task', {log(message) {console.log(message); return null}})
+      const newUrl = config.env.urlFromCli | 'https://www.guru99.com/'
+      config.baseUrl = newUrl
+      return config
       // implement node event listeners here
     },
   },
